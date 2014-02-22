@@ -21,9 +21,10 @@ Raspberry Pi photobooth
 
 # Installation
 
+- Clone this repo on your raspberry pi
 - Install Node modules
 	-Raspicam
-- Install Laravel
+- Install Laravel packages
 - Install Bower components
 
 - mkdir public/files
@@ -37,7 +38,9 @@ Raspberry Pi photobooth
 
 # Usage
 
-- Connect to your raspberry pi with a SSH application (mobile or tablet)
+- Connect raspberry pi to router with RJ45 cable
+- Connect mobile or tablet to router by Wifi
+- Connect to your raspberry pi with a SSH application on your mobile or tablet
 - Start node server
 
 	$ node /var/www/photoboot/server.js
