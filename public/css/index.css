@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'quicksandbold';
+    src: url('fonts/quicksand-bold-webfont.eot');
+    src: url('fonts/quicksand-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/quicksand-bold-webfont.woff') format('woff'),
+         url('fonts/quicksand-bold-webfont.ttf') format('truetype'),
+         url('fonts/quicksand-bold-webfont.svg#quicksandbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+	height: 100%;
+}
+#slideshow {
+	/*height: 75%;*/
+}
+.carousel,
+.item,
+.active {
+	height: 100%;
+}
+.carousel-inner {
+	height: 100%;
+}
+
+#bande {
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	bottom: 20px;	
+	height: 70px;
+}
+
+#bande button {
+	margin-top: 13px;
+	float: left;
+}
+
+#bande h1 {
+	float: left;
+    line-height: 70px;
+    margin: 0 0 0 30px;
+    font-family: 'quicksandbold';
+}
+#bande h1 span {
+	color: #FC2525;
+}
+
+@media (min-width: 768px) { 
+
+	#bande {
+		width: 100%;
+	}
+}

@@ -1,0 +1,12 @@
+x install laravel
+x install twitter bootstrap
+x install bower
+x install jquery
+- install less
+
+- home view
+	- show images
+	- button grab
+		- jquery ajax
+
+- rasp root redirect to photobooth
