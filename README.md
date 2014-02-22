@@ -1,0 +1,4 @@
+photobooth
+==========
+
+Raspberry Pi photobooth
