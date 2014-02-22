@@ -34,19 +34,24 @@ http.createServer(function(request, response) {
 
 		case "/grab":
 
+			var number_photos = 3;
+			var timelapse_between = 2000;
+
 			var camera = new RaspiCam({
 				mode: "photo",
 				output: "files/%d.jpg",
 				encoding: "jpg",
-				timelapse: 1000,
-				//timeout: 4000,
-				timeout: 1000,
+				timelapse: timelapse_between,
+				timeout: number_photos * timelapse_between,
+				//timeout: 1000,
 				quality: 100,
 				encoding: 'jpg',
-				width: 2592,
-				height: 1944
+				//width: 2592,
+				//height: 1944
 				//width: 1024,
 				//height: 768
+				width: 437,
+				height: 328
 			});			
 			var readed = false,
 				group;
@@ -80,8 +85,8 @@ http.createServer(function(request, response) {
 			    if(readed) {
 
 				    fs.rename("files/1.jpg", "public/files/"+group+"-1.jpg", function() {
-						//fs.rename("files/2.jpg", "public/files/"+group+"-2.jpg", function() {
-							//fs.rename("files/3.jpg", "public/files/"+group+"-3.jpg", function() {
+						fs.rename("files/2.jpg", "public/files/"+group+"-2.jpg", function() {
+							fs.rename("files/3.jpg", "public/files/"+group+"-3.jpg", function() {
 						    	//fs.rename("files/4.jpg", "public/files/"+group+"-4.jpg", function() {
 									
 									console.log('Files renamed.');
@@ -96,8 +101,8 @@ http.createServer(function(request, response) {
 										}
 									});
 							    //});
-						    //});	
-					    //});			    	
+						    });	
+					    });			    	
 				    });
 				}
 			});
@@ -122,4 +127,3 @@ http.createServer(function(request, response) {
 //}).listen(9000);
 
 sys.puts("Server running at http://192.168.0.102:8080");
-//sys.puts("Server running at http://192.168.0.7:9000");

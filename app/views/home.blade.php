@@ -25,7 +25,9 @@
       $active = $i == $group ? 'active' : '';
       ?>
       <div class="item {{ $active }}">
-        <img src="{{ URL::asset('files/'.$i.'-1.jpg') }}" />
+        @for($j = 1; $j <= 3; $j++)
+          <img src="{{ URL::asset('files/'.$i.'-'.$j.'.jpg') }}" />
+        @endfor
       </div>
     @endfor    
   </div>

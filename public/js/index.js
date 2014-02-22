@@ -9,8 +9,16 @@ jQuery(function() {
 			
 			$('.item.active', $inner).removeClass('active');
 
-			var items_in_group = 1; //4;
+			var items_in_group = 3; //4;
+			var imgs = '';
 
+			for(var i = 0; i < items_in_group; i++) {
+				imgs += '<img src="'+window.wpath+'files/'+res.group+'-'+i+'.jpg" />';
+			}
+
+			$inner.prepend('<div class="item '+active+'">'+imgs+'</div>');
+
+			/*
 			for(var i = items_in_group; i >= 1; i--){
 
 				var active = i == 1 ? 'active' : '';
@@ -20,7 +28,8 @@ jQuery(function() {
 				    '  <img src="'+window.wpath+'files/'+res.group+'-'+i+'.jpg" />'+
 				    '</div>'
 				);
-			}			
+			}
+			*/			
 		});
 	});
 });
