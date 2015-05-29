@@ -22,9 +22,17 @@ Raspberry Pi photobooth
 # Installation
 
 - Clone this repo on your raspberry pi
+
+    $ git clone git@github.com:FR6/photobooth.git
+
 - Install Node modules
-	-Raspicam
+	
+    $ npm install raspicam
+
 - Install Laravel packages
+
+    $ composer install
+
 - Install Bower components
 
 - mkdir public/files
